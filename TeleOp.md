@@ -16,5 +16,4 @@ A TeleOp program should have two basic functions, `init()` and `loop()`.
   
 Buttons, bumpers, or the top hat (d-pad) represent a boolean value. They are `true` if the corisponding control is activated and `false` if it isn't.
 
-The left and right sticks and triggers return an integer value. `-128` if the stick is all the way down or all the way to the left, and `128` if the stick is all the way up or all the way right. You shouldn't check the sticks against a hard value like...
- 
+The left and right sticks and triggers return an integer value from `-128` to `128`. In code the library's treat the stick's y-postion and x-postion as two seperate inputs. `-128` if the stick is all the way down or all the way to the left, and `128` if the stick is all the way up or all the way right. You **shouldn't** check the sticks against a hard value like 0 or 128 because the stick feedfac can be imprecise. You **should** instead use a range of values so the code actually activates.
