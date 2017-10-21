@@ -9,7 +9,7 @@ A TeleOp program should have two basic functions, `init()` and `loop()`.
 
   i.e. "if buttonA is pressed, run this motor"
   
-Because TeleOp is recursive, it is easy to repeatedly assign motor and servo values, changing values faster than is practical. What helps is keeping the assigning to the end of the loop, in one place. Save the current speed or position you want in a variable to use later, that way every time you find a new value you want to set the motors or servos to, they don't spaz out.
+Because TeleOp is recursive, it is easy to repeatedly assign motor and servo values, changing values faster than is practical. What helps is to keep the assigning to the end of the loop, in one place. Save the current speed or position you want in a variable to use later, that way every time you find a new value you want to set the motors or servos to, they don't spaz out.
 
 ### Gampad Controls
 `gamepad1` or `gamepad2` refers to the first and second gamepads respectively. You cannot use those names all by itself, you must append a button, stick, or switch to it you want to check.
